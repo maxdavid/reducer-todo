@@ -4,7 +4,7 @@ export const todoReducer = (state, { type, payload }) => {
       console.log(payload);
       const todo = {
         title: payload.title,
-        deadling: payload.deadline,
+        deadline: payload.deadline,
         completed: false,
         id: Date.now()
       };

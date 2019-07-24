@@ -9,11 +9,25 @@ export const TodoList = () => {
   return (
     <TodoListContainer>
       {todoList.map(todo => (
-        <Todo key={todo.id} todoInfo={todo} />
+        <Details>
+          <Summary>{todo.deadline}</Summary>
+          <Todo key={todo.id} todoInfo={todo} />
+        </Details>
       ))}
     </TodoListContainer>
   );
 };
+
+const Details = styled.details`
+  width: 100%;
+  outline: none;
+`;
+const Summary = styled.summary`
+  width: 100%;
+  outline: none;
+  height: 20px;
+  cursor: pointer;
+`;
 
 const TodoListContainer = styled.div`
   width: 100%;

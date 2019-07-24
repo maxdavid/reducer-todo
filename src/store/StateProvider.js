@@ -10,6 +10,7 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 export const initialState = {
   todoList: [
     {
+      deadline: '2019-07-24',
       title: 'Learn about reducers',
       completed: false,
       id: 3892987589
